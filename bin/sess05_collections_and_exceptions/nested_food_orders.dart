@@ -15,11 +15,11 @@
  */
 void main()
 {
-  /// Alist containing restaurant customers
+  /// A list containing restaurant customers
   ///
   /// Each customer is stored as a map.
   /// The 'orders' key contains another list, making this a nested collection.
-  List<Map<String,dynamic>> customers = [
+  List<Map<String, dynamic>> customers = [
     {
       "name": "Amina Hassan",
       "country": "Kenya",
@@ -69,9 +69,8 @@ void main()
   print("====================================================================");
   print(" EAST AFRICAN RESTAURANT CUSTOMER ORDERS");
   print("====================================================================");
-  // Loop thru every customer
-  for(var customer in customers)
-    {
+  // Loop through every customer
+  for (var customer in customers) {
       print("Customer   : ${customer["name"]}");
       print("Country   : ${customer["country"]}");
       print("Orders   : ");
@@ -80,9 +79,11 @@ void main()
       List<String> orders = List<String>.from(customer["orders"]);
 
       // Display each ordered food items
-      for(int i = 0; i < orders.length; i++) {
-        print("object");
-        print("--------------------------------------------------------------");
+      for (int i = 0; i < orders.length; i++) {
+        print("   ${i + 1}. ${orders[i]}");
       }
+
+      print("--------------------------------------------------------------");
+
     }
 }
