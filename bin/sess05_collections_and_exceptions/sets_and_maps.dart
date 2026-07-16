@@ -7,41 +7,41 @@
 
 void main()
 {
-  //============================================
+  // ============================================================
   // 1. Dart Sets
-  //=========================================
+  // ============================================================
   print('\n---- 1. Dart Sets ----');
 
-  // create a set of fruits
-  Set<String> fruits = {'Orange', 'Avocado', 'Apricot', 'Banana'};
-  Set<String> tropicalFruits = {'Mango', 'Pineapple', 'Coconut'};
+  // Create a set of fruits
+  Set<String> fruits = {'Orange','Avocado','Apricot','Banana'};
+  Set<String> tropicalFruits = {'Mango','Pineapple','Coconut'};
   Set<int> primeNumbers = {2,3,5,7,11};
 
   // Basic set properties
-  print("==== Basic set properties ====");
+  print("===== Basic set properties =====");
   print("Fruit set:\n$fruits");
-  print("First fruit: ${fruits.first}"); // no guaranteed order(sets are unordered, unlike lists)
+  print("First fruit: ${fruits.first}"); // No guaranteed order (sets are unordered, unlike lists)
   print("Fruit set length: ${fruits.length}");
   print('Check whether "Apple" is in the fruit set: ${fruits.contains("Apple")}');
   print('Check whether "Avocado" is in the fruit set: ${fruits.contains("Avocado")}');
-  print("Is the fruit set empty? ${fruits.isEmpty}");
+  print('Is the fruit set empty? ${fruits.isEmpty}');
 
-  // Add elements (fruits) to the first set
-  print("==== Adding elements (fruits) to the 'fruit' set ====");
+  // Add elements (fruits) to the fruit set
+  print("\n===== Adding elements (fruits) to the 'fruit' set =====");
   fruits.add('Grape');
-  fruits.add('Apple');
+  fruits.add("Apple");
   print("After adding 'grape' & 'apple':\n$fruits");
 
   // Add a duplicate fruit
   fruits.add("Avocado");
   print("After adding duplicate 'avocado':\n$fruits");
 
-  // Add multiple elements(fruits)
-  fruits.addAll({'Kiwi', 'Pear'});
+  // Add multiple elements (fruits)
+  fruits.addAll({'Kiwi','Pear'});
   print('After calling/invoking "addAll()":\n$fruits');
 
   // Remove element(s) (fruit(s))
-  print("==== Removing Element (fruit) from the 'fruit' set ====");
+  print("\n===== Removing Element (fruit) from the 'fruit' set =====");
   fruits.remove('Banana');
   print('After removing "Banana":\n$fruits');
 

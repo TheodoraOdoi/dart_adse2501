@@ -1,4 +1,4 @@
-// Create a product class
+// Create a Product class
 class Product
 {
   final String id;

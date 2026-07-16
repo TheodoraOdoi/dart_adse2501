@@ -1,27 +1,20 @@
 /*
-* Dart program to demonstrate lists.
-* Author: Theo
-* Description: This program demonstrates dart lists.
-* Date: 2026-07-01
+ * Dart program to demonstrate lists.
+ * Author: Theo
+ * Description: This program demonstrates Dart lists.
+ * Date: 2026-07-01
  */
 
-// Import the dart collection library  
+// Import the dart collection library
 import 'dart:collection';
 
 void main()
 {
-  //=========================================
-  // 1. Create a list
-  //============================================
-  print("\n----1. Create a list ----");
-  var list = [1, 2, 3, 4, 5];
-  print(list);
-
-  //=========================================
+  // ============================================================
   // 1. Fixed-length list
-  //============================================
-  print("\n----2. Create a fixed-length list ----");
-  List<String> fixedList = List.filled(3, ''); // Initialise with an empty string
+  // ============================================================
+  print('\n----1. Create a fixed-length list ----');
+  List<String> fixedList = List.filled(3,''); // Initialise with empty string
   print('Initial fixed list: $fixedList');
 
   // Assign values to fixed list
@@ -30,7 +23,7 @@ void main()
   fixedList[2] = 'Cherry';
   print('After assignment: $fixedList');
 
-  // Try to add an element to the fixed list : will throw an error
+  // Try to add an element to the fixed list : will throw an erro
   try
   {
     fixedList.add('Date'); // will throw an error
@@ -43,18 +36,18 @@ void main()
   // Trying to change length - throws UnsupportedError
   try
   {
-    fixedList.length = 4; //will throw an error
-  } catch (e)
+    fixedList.length = 4; // Will throw an error
+  }catch(e)
   {
     print('Error when changing length of fixed list: ${e.runtimeType}');
     print('Message: ${e.toString()}');
   }
 
-  //=========================================
+  // ============================================================
   // 2. Growable list
-  //============================================
+  // ============================================================
   // Create an empty growable list
-  print("\n----2. Create a growable list ----");
+  print('\n----2. Create a growable list ----');
   List<String> growableList = [];
   print("Initial growable list: $growableList");
 
@@ -65,20 +58,22 @@ void main()
   growableList.add("Theodora");
   growableList.add("Edmund");
   growableList.add("Lavender");
+  growableList.add("Cyrus");
   growableList.add("Shion");
   growableList.add("Adan");
   growableList.add("Keagan");
   print('After adding elements (student names):\n$growableList');
 
   // Add multiple elements
-  growableList.addAll(["Apricot", "Mango", "Elephant Apple"]);
+  growableList.addAll(["Apricot","Mango","Elephant Apple"]);
+  print("\nAfter adding a list of fruits:\n$growableList");
 
   // Insert at a specific position/index
   growableList.insert(1, "Avocado");
   growableList.insert(3, "Blueberry");
   print("\nAfter inserting fruits:\n$growableList");
 
-  // Remove an element from the list
+  // Remove an fruit from the list by name
   growableList.remove("Mango");
 
   // Remove an element at a specific position/index
@@ -94,18 +89,17 @@ void main()
   growableList.clear();
   print("\nAfter clearing the list:\n$growableList");
 
-  //=========================================
-  // Conversion between list types
-  //============================================
-  // Create an empty growable list
-  print("\n----3. Conversion between list types ----");
+  // ============================================================
+  // 3. Conversion between List types
+  // ============================================================
+  print('\n----3. Conversion between List types ----');
 
   // Convert growable to fixed
   List<String> convertedFixed = List.from(growableList, growable: false);
-  print("Converted to fixed:\n$convertedFixed");
+  print('Converted to fixed:\n$convertedFixed');
   try
   {
-    convertedFixed.add("Grape"); // will throw an error
+    convertedFixed.add("Grape"); // Will throw an error
   } catch (e)
   {
     print('Error when adding to fixed list: ${e.runtimeType}');
@@ -117,4 +111,5 @@ void main()
   print("Converted growable: $convertedGrowable");
   convertedGrowable.add("Dragon Fruit");
   print("After adding 'Dragon Fruit':\n$convertedGrowable");
+
 }

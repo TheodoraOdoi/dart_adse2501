@@ -6,5 +6,5 @@ class User
   final bool isActive;
   final List<String> permissions;
 
-  User( this.name,  this.role,  this.isActive, this.permissions);
+  User( this.name,  this.role,  this.isActive,  this.permissions);
 }
